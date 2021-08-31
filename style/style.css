@@ -132,7 +132,7 @@ margin: 30px 0;
 /* Pie de pagina */
 .pie-pagina {
     position:relative;
-    width: 100%;
+    width: 100vw;
     height: 320px;
     left: 0px;
     bottom:0px;
@@ -158,6 +158,24 @@ margin: 30px 0;
     left: 718px;
     top: 216px;
 
+}
+
+.banner-will {
+    width:100vw;
+    margin-bottom:64px;
+    height:806px;
+}
+
+.circulo {
+    background-color: black;
+    height:64px;
+    width:64px;
+}
+.circulo >img {
+    border-radius: 50%;
+    border:1px solid white;
+    
+   
 }
 
 
