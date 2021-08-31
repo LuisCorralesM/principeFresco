@@ -1,3 +1,3 @@
 import { getProductos } from "./getProductos.js";
 
-getProductos()
+getProductos(0)
