@@ -124,7 +124,9 @@
     </main>
     
 
-        <!-- templates -->
+    <!-- templates -->
+
+
 
     <!-- carrito -->
     <template id="template-carrito">
@@ -143,8 +145,9 @@
         <td>$ <span>500</span></td>
         </tr>
     </template>
-    
-    <!-- footer -->
+
+
+    <!-- footer carrito-->
     <template id="template-footer">
         <th scope="row" colspan="2">Total productos</th>
         <td>10</td>
@@ -158,6 +161,44 @@
         </td>
         <td class="font-weight-bold">$ <span>5000</span></td>
     </template>
+
+
+    <!-- formulario-compra -->
+    <form class="row g-3">
+        <div class="md-4">
+          <label for="validationDefault01" class="form-label"> Nombre comprador</label>
+          <input type="text" class="form-control" id="nombre-comprador" value="" required>
+        </div>
+        <div class="md-4">
+          <label for="validationDefaultUsername" class="form-label"> Fecha de compra</label>
+          <div class="input-fecha">
+            <input type="date" class="form-control" id="Fecha-compra"  aria-describedby="inputGroupPrepend2" required>
+          </div>
+        </div>
+        <div class="md-6">
+          <label for="validationDefault03" class="form-label">Cantidad de productos</label>
+          <input type="text" class="form-control" id="cantidad-productos"  readonly ="true">
+        </div>
+        <div class="md-6">
+            <label for="validationDefault03" class="form-label"> Valor por producto</label>
+            <input type="text" class="form-control" id="valor-producto" readonly ="true">
+          </div>
+        <div class="md-3">
+          <label for="validationDefault05" class="form-label">Valor total</label>
+          <input type="text" class="form-control" id="valor-total" readonly ="true">
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+            <label class="form-check-label" for="invalidCheck2">
+              Aceptar terminos y condiciones de compra
+            </label>
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+      </form>
     
 
 
