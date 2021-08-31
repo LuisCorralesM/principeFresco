@@ -2,53 +2,62 @@ export {getProductos}
 
 const getProductos = async ()=>{
     try {
-        const res = await fetch('https://http://localhost:3000/')
+        const res = await fetch('http://localhost:3000/productos')
         const data = await res.json()
-        pintarCards(data)
+        pintarProductos(data)
     } catch (error) {
         console.log(error);
     }
 }
 
-const pintarCards = (data)=>{
-    const templatedCard = document.querySelector('.templated-card').content
-    const fragment = document.createDocumentFragment()
-    const cardMujeres = document.querySelector('#cardMujeres')
-    const cardHombres = document.querySelector('#cardHombres')
+const pintarProductos = (data)=>{
+    // imagenes vista pequeña
+    const 
+    img1Pequeña = document.querySelector('.img1 img'),
+    img2Pequeña = document.querySelector('.img2 img'),
+    img3Pequeña = document.querySelector('.img3 img'),
+    img4Pequeña = document.querySelector('.img4 img');
 
-            if(cardMujeres){
-                data.forEach(foto => {
-                    if(foto.albumId == 1){
-                        // console.log('seccion mujeres');
-                        // console.log(foto.albumId)
-    
-                        const {url, title, id} = foto
-                        templatedCard.querySelector('#btn-carrito').dataset.id = id
-                        templatedCard.querySelector('img').setAttribute('src', url)
-                        templatedCard.querySelector('h5').textContent = title
-                        templatedCard.querySelector('p').textContent = `${(Math.round(Math.random()*150000))}`
-                        const clone = templatedCard.cloneNode(true)
-                        fragment.append(clone)       
-                    }
-                });
-                cardMujeres.append(fragment)
-            } 
+    img1Pequeña.setAttribute('src', data[0].imagenes[0])
+    img2Pequeña.setAttribute('src', data[0].imagenes[1])
+    img3Pequeña.setAttribute('src', data[0].imagenes[2])
+    img4Pequeña.setAttribute('src', data[0].imagenes[3])
 
-            if(cardHombres){
-                data.forEach(foto => {
-                    if(foto.albumId == 2){
-                        // console.log('seccion hombres');
-                        // console.log(foto.albumId)
+    // imagen vista grande e info producto
+    const 
+    divImgGrande = document.querySelector('.gird-item-grande img'),
+    nombreProducto = document.querySelector('.nombre-producto h1'),
+    precioProducto = document.querySelector('.precio p'),
+    listaTallas = document.querySelectorAll('.lista-tallas li');
     
-                        const {url, title, id} = foto
-                        templatedCard.querySelector('#btn-carrito').dataset.id = id
-                        templatedCard.querySelector('img').setAttribute('src', url)
-                        templatedCard.querySelector('h5').textContent = title
-                        templatedCard.querySelector('p').textContent = `${(Math.round(Math.random()*150000))}`
-                        const clone = templatedCard.cloneNode(true)
-                        fragment.append(clone)       
-                    }
-                });
-                cardHombres.append(fragment)
-            } 
+    divImgGrande.setAttribute('src', data[0].imagenes[0])
+
+    nombreProducto.textContent = data[0].nombre
+    precioProducto.textContent = data[0].precio
+    
+    listaTallas.forEach((li, index) => {
+        li.textContent = data[0].tallas[index]
+    })
+
+    // Todos los productos
+    const 
+    // imgProducto1 = document.querySelector('.imgPro1 img'),
+    // imgroducto2 = document.querySelector('.imgPro2 img'),
+    // imgroducto3 = document.querySelector('.imgPro3 img'),
+    rowProductos = document.querySelector('.grid-row-productos')
+
+    for(let i=1; i<4; i++){
+       rowProductos.innerHTML += `
+       <div class="grid-column-producto">
+            <div class="imagen-producto imgPro${i}">
+                <img src="${data[i].imagenes[0]}" alt="">
+            </div>
+            <div class="descripcion-producto">
+                <p class="nombre-producto">${data[i].nombre}</p>
+                <p class="precio-producto">${data[i].precio}</p>
+            </div>
+       </div>
+       `
+    }
 }
+
