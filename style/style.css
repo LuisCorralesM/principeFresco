@@ -1,3 +1,8 @@
-.grid-productos{
-    
+ 
+ /* grid padre */
+.grid-row-productos{
+    display: grid;
+    margin: 50px;
+    background-color: aquamarine;
 }
+
