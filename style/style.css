@@ -127,3 +127,21 @@ margin: 30px 0;
 .formulario-compra {
     margin:50px;
 }
+
+
+/* Pie de pagina */
+.pie-pagina {
+    width: 1366px;
+    height: 320px;
+    left: 0px;
+    bottom:0px;
+    background-color: black;
+}
+
+.pie-pagina img {
+    margin-left:523px;
+    margin-top:64px;
+    width: 246px;
+    height: 80px;
+
+}
