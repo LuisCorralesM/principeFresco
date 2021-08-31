@@ -30,29 +30,29 @@
     </header>
 
     <main>        
-        <!-- Grid productos--------------------------->
-        <div class="grid-row-productos">
+        <!-- Grid vista productos--------------------------->
+        <div class="grid-row-vista-productos">
             <!-- imagenes producto -->
             <div class="grid-column-productos">
                 <!-- imagenes pequeñas -->
                 <div class="grid-colomn-items">
                     <div class="grid-item-pequeño">
-                        <img src="https://res.cloudinary.com/dobboq5dt/image/upload/v1630421820/Workshop%2031Agosto/Frame_16_babliz.png" alt="" style="width: 100px; margin: 20px;">
+                        <img src="https://res.cloudinary.com/dobboq5dt/image/upload/v1630421820/Workshop%2031Agosto/Frame_16_babliz.png" alt="" >
                     </div>
                     <div class="grid-item-pequeño">
-                        <img src="https://res.cloudinary.com/dobboq5dt/image/upload/v1630417970/Workshop%2031Agosto/Frame_14_y0u0da.png" alt=""  style="width: 100px; margin: 20px;">
+                        <img src="https://res.cloudinary.com/dobboq5dt/image/upload/v1630417970/Workshop%2031Agosto/Frame_14_y0u0da.png" alt=""  >
                     </div>
                     <div class="grid-item-pequeño">
-                        <img src="" alt=""  style="width: 100px; margin: 20px;">
+                        <img src="https://res.cloudinary.com/dobboq5dt/image/upload/v1630417970/Workshop%2031Agosto/Frame_15_lbxmo0.png" alt=""  >
                     </div>
                     <div class="grid-item-pequeño">
-                        <img src="https://res.cloudinary.com/dobboq5dt/image/upload/v1630417970/Workshop%2031Agosto/Frame_15_lbxmo0.png" alt=""  style="width: 100px; margin: 20px;">
+                        <img src="https://res.cloudinary.com/dobboq5dt/image/upload/v1630417970/Workshop%2031Agosto/Frame_15_lbxmo0.png" alt=""  >
                     </div>
                 </div>
                  <!-- imagen grande -->
                 <div class="grid-column-item">
                     <div class="gird-item-grande">
-                        <img src="https://res.cloudinary.com/dobboq5dt/image/upload/v1630421820/Workshop%2031Agosto/Frame_16_babliz.png" alt="" style="width: 500px; margin: 20px;">
+                        <img src="https://res.cloudinary.com/dobboq5dt/image/upload/v1630421820/Workshop%2031Agosto/Frame_16_babliz.png" alt="">
                     </div>
                 </div>
             </div>
@@ -80,7 +80,45 @@
                 </div>
             </div>
         </div>
-    
+
+        <div class="contenedor-galeria-productos">
+            <h2>
+                YOU MAY ALSO LIKE
+            </h2>
+        <!-- Grid todos los productos--------------------------->
+        <div class="grid-row-productos">
+            <div class="grid-column-producto">
+                <div class="imagen-producto">
+                    <img src="https://res.cloudinary.com/dobboq5dt/image/upload/v1630417957/Workshop%2031Agosto/Rectangle_1_rkjpy2.png" alt="">
+                </div>
+                <div class="descripcion-producto">
+                    <p class="nombre-producto">Nombre producto</p>
+                    <p class="precio-producto">$0000</p>
+                </div>
+            </div>
+            <div class="grid-column-producto">
+                <div class="imagen-producto">
+                    <img src="https://res.cloudinary.com/dobboq5dt/image/upload/v1630417955/Workshop%2031Agosto/Frame_20_ind8rr.png" alt="">
+                </div>
+                <div class="descripcion-producto">
+                    <p class="nombre-producto">Nombre producto</p>
+                    <p class="precio-producto">$0000</p>
+                </div>
+
+            </div>
+            <div class="grid-column-producto">
+                <div class="imagen-producto">
+                    <img src="https://res.cloudinary.com/dobboq5dt/image/upload/v1630417958/Workshop%2031Agosto/Frame_17_rpc5yn.png" alt="">
+                </div>
+                <div class="descripcion-producto">
+                    <p class="nombre-producto">Nombre producto</p>
+                    <p class="precio-producto">$0000</p>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
         <!-- Carrito -->
         <div class="displayNone" id="contenedor-carrito">
             <br>
@@ -171,41 +209,45 @@
 
 
     <!-- formulario-compra -->
-    <form class="row g-3">
-        <div class="md-4">
-          <label for="validationDefault01" class="form-label"> Nombre comprador</label>
-          <input type="text" class="form-control" id="nombre-comprador" value="" required>
-        </div>
-        <div class="md-4">
-          <label for="validationDefaultUsername" class="form-label"> Fecha de compra</label>
-          <div class="input-fecha">
-            <input type="date" class="form-control" id="Fecha-compra"  aria-describedby="inputGroupPrepend2" required>
-          </div>
-        </div>
-        <div class="md-6">
-          <label for="validationDefault03" class="form-label">Cantidad de productos</label>
-          <input type="text" class="form-control" id="cantidad-productos"  readonly ="true">
-        </div>
-        <div class="md-6">
-            <label for="validationDefault03" class="form-label"> Valor por producto</label>
-            <input type="text" class="form-control" id="valor-producto" readonly ="true">
-          </div>
-        <div class="md-3">
-          <label for="validationDefault05" class="form-label">Valor total</label>
-          <input type="text" class="form-control" id="valor-total" readonly ="true">
-        </div>
-        <div class="col-12">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-            <label class="form-check-label" for="invalidCheck2">
-              Aceptar terminos y condiciones de compra
-            </label>
-          </div>
-        </div>
-        <div class="col-12">
-          <button class="btn btn-primary" type="submit">Submit form</button>
-        </div>
-      </form>
+
+    <template class = "formulario-compra">
+        <form class="row g-3" id = "formCompra">
+            <div class="md-4">
+              <label for="validationDefault01" class="form-label"> Nombre comprador</label>
+              <input type="text" class="form-control" id="nombre-comprador" value="" required>
+            </div>
+            <div class="md-4">
+              <label for="validationDefaultUsername" class="form-label"> Fecha de compra</label>
+              <div class="input-fecha">
+                <input type="date" class="form-control" id="fecha-compra"  aria-describedby="inputGroupPrepend2" required>
+              </div>
+            </div>
+            <div class="md-6">
+              <label for="validationDefault03" class="form-label">Cantidad de productos</label>
+              <input type="text" class="form-control" id="cantidad-producto"  readonly ="true">
+            </div>
+            <div class="md-6">
+                <label for="validationDefault03" class="form-label"> Valor por producto</label>
+                <input type="text" class="form-control" id="valor-producto" readonly ="true">
+              </div>
+            <div class="md-3">
+              <label for="validationDefault05" class="form-label">Valor total</label>
+              <input type="text" class="form-control" id="valor-total" readonly ="true">
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                <label class="form-check-label" for="invalidCheck2">
+                  Aceptar terminos y condiciones de compra
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-primary" type="submit">Submit form</button>
+            </div>
+          </form>
+    </template>
+    
     
 
 

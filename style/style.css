@@ -1,19 +1,45 @@
- 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* grid vista producto-------------------------------------------------------------------------------------------------------------------------- */
+
  /* grid padre */
-.grid-row-productos{
+.grid-row-vista-productos{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 60% 40%;
     grid-template-rows: 1fr;
     margin: 50px;
-    background-color: aquamarine;
 }
-/* -------------------------------------- */
+/*grid hijo 1 -------------------------------------- */
 .grid-column-productos{
-    display: flex;
-    /* grid-template-columns: 1fr, 3fr; */
-    background-color: rgb(224, 228, 227);
+    display: grid;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 1fr;
 }
-/* ----------------------------------- */
+
+/* imgs pequeñas */
+.grid-item-pequeño{
+    text-align: center;
+}
+
+.grid-item-pequeño > img{
+    width: 100px;
+    margin-bottom: 50px;
+}
+
+/* img grande */
+.grid-column-item{
+    text-align: right;
+}
+.gird-item-grande > img{
+    width: 700px;
+    height: 750px;
+    object-fit: cover;
+}
+
+/*grid hijo 2 -------------------------------------- */
 .grid-column-detalle{
     background-color: rgb(255, 255, 255);
     padding: 30px 50px;
@@ -27,7 +53,7 @@
 .precio > p{
 margin: 30px 0;
  font-size: 20px;
- font-weight: 900;
+ font-weight: 900
 }
 
 .tallas > p{
@@ -62,4 +88,42 @@ margin: 30px 0;
 }
 .btn2{
     background-color: rgb(13, 104, 223);
+}
+/* grid todos los productos -------------------------------------------------------------------------------------------------------------------------------------- */
+/* Galería productos */
+
+.contenedor-galeria-productos > h2{
+    font-size: 60px;
+    font-weight: 900;
+    text-align: center;
+    padding: 50px 0;
+}
+/* grilla */
+.grid-row-productos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 50px;
+    padding: 0 100px;
+}
+
+.imagen-producto > img{
+    width: 100%;
+}
+
+.descripcion-producto{
+    padding: 10px 0;
+}
+
+.nombre-producto,
+.precio-producto{
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+/* Formulario de compra */
+.formulario-compra {
+    margin:50px;
 }

@@ -5,13 +5,16 @@
         "nombre": "producto1",
         "cantidad": ["10","10","10","10","10"],
         "tallas": ["S", "M", "L", "XL","XXL"],
+        "precio":"80000",
         "imagenes":["https://res.cloudinary.com/dobboq5dt/image/upload/v1630421820/Workshop%2031Agosto/Frame_16_babliz.png", "https://res.cloudinary.com/dobboq5dt/image/upload/v1630417970/Workshop%2031Agosto/Frame_14_y0u0da.png","https://res.cloudinary.com/dobboq5dt/image/upload/v1630417970/Workshop%2031Agosto/Frame_15_lbxmo0.png"]
+     
       },
       {
         "id": 2,
         "nombre": "producto2",
         "cantidad": ["10","10","10","10","10"],
         "tallas": ["S", "M", "L", "XL", "XXL"],
+        "precio":"80000",
         "imagenes":["https://res.cloudinary.com/dobboq5dt/image/upload/v1630417957/Workshop%2031Agosto/Rectangle_1_rkjpy2.png", "https://res.cloudinary.com/dobboq5dt/image/upload/v1630417958/Workshop%2031Agosto/Rectangle_2_nqaows.png", "https://res.cloudinary.com/dobboq5dt/image/upload/v1630417958/Workshop%2031Agosto/Rectangle_3_tfzy7t.png" ]
         
       },
@@ -20,6 +23,7 @@
         "nombre": "producto3",
         "cantidad": ["10","10","10","10","10"],
         "tallas": ["S", "M", "L", "XL", "XXL"],
+        "precio":"80000",
         "imagenes":["https://res.cloudinary.com/dobboq5dt/image/upload/v1630417958/Workshop%2031Agosto/Frame_17_rpc5yn.png", "https://res.cloudinary.com/dobboq5dt/image/upload/v1630417957/Workshop%2031Agosto/Frame_18_vyclef.png","https://res.cloudinary.com/dobboq5dt/image/upload/v1630417953/Workshop%2031Agosto/Frame_19_ghwrps.png"]
         
       },
@@ -28,6 +32,7 @@
         "nombre": "producto4",
         "cantidad": ["10","10","10","10","10"],
         "tallas": ["S", "M", "L", "XL","XXL"],
+        "precio":"80000",
         "imagenes":["https://res.cloudinary.com/dobboq5dt/image/upload/v1630417955/Workshop%2031Agosto/Frame_20_ind8rr.png", "https://res.cloudinary.com/dobboq5dt/image/upload/v1630417951/Workshop%2031Agosto/Frame_22_gvbi1p.png", "https://res.cloudinary.com/dobboq5dt/image/upload/v1630417951/Workshop%2031Agosto/Frame_21_c9knwc.png"]
         
       }
