@@ -2,7 +2,7 @@ export {getProductos}
 
 const getProductos = async ()=>{
     try {
-        const res = await fetch('https://jsonplaceholder.typicode.com/photos')
+        const res = await fetch('https://http://localhost:3000/')
         const data = await res.json()
         pintarCards(data)
     } catch (error) {
