@@ -125,7 +125,7 @@ margin: 30px 0;
 
 
 /* Formulario de compra */
-.formulario-compra {
+#formCompra {
     margin:50px;
 }
 
@@ -188,4 +188,8 @@ margin: 30px 0;
 
 #contenedor-carrito{
     background-color: rgb(131, 127, 127);
+}
+
+.displayNone{
+    display: none;
 }

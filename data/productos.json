@@ -1,7 +1,7 @@
 {
     "productos": [
       {
-        "id": 1,
+        "id": 0,
         "nombre": "Fresh Stripe Sweater",
         "cantidad": [10,10,10,10,10],
         "tallas": ["S", "M", "L", "XL","XXL"],
@@ -10,7 +10,7 @@
      
       },
       {
-        "id": 2,
+        "id": 1,
         "nombre": "Crown Sweatshirt",
         "cantidad": [10,10,10,10,10],
         "tallas": ["S", "M", "L", "XL", "XXL"],
@@ -19,7 +19,7 @@
         
       },
       {
-        "id": 3,
+        "id": 2,
         "nombre": "Fresh Black Tie-Dye Hoodie",
         "cantidad": [10,10,10,10,10],
         "tallas": ["S", "M", "L", "XL", "XXL"],
@@ -28,7 +28,7 @@
         
       },
       {
-        "id": 4,
+        "id": 3,
         "nombre": "Pose For It Tee",
         "cantidad": [10,10,10,10,10],
         "tallas": ["S", "M", "L", "XL","XXL"],

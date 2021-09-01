@@ -24,14 +24,15 @@
               </div>
               <div class="px-5">
                 <a href=""><img class="mx-3" src="./imagenes/perfil.png" alt=""></a>
-                <a href="carrito.html"><img class="mx-3" src="./imagenes/bolsa.png" alt=""></a>  
+                <a href="carrito.html"><img class="mx-3" src="./imagenes/bolsa.png" alt="" id="btnCarrito"></a>  
               </div>
             </div>
         </nav>
     </header>
 
     <main>        
-        <!-- Grid vista productos--------------------------->
+        <section class="section">
+                    <!-- Grid vista productos--------------------------->
         <div class="grid-row-vista-productos">
             <!-- imagenes producto -->
             <div class="grid-column-productos">
@@ -93,18 +94,81 @@
             <img src="https://res.cloudinary.com/dobboq5dt/image/upload/v1630417815/Workshop%2031Agosto/cover_jnhtky.png" alt="">
         </div>
 
-        <footer>
-            <div class="pie-pagina">
-                <img class = "img1" src="./imagenes/Príncipe fresco.png" alt="">
-                <div class = "circulo"><img class = "img2" src="https://res.cloudinary.com/dobboq5dt/image/upload/v1630421638/Workshop%2031Agosto/Iconos/Vector_2_hjr3ze.png" alt=""></div>
-                <div class = "circulo"><img class = "img3" src="https://res.cloudinary.com/dobboq5dt/image/upload/v1630421638/Workshop%2031Agosto/Iconos/Vector_1_wyuxsg.png" alt=""></div>
-            </div>
+        </section>
 
-        </footer>
+        <div class="displayNone" id="contenedor-carrito">
+            <br>
+            <h4  style="color: white; text-align:center;">Carrito de compras</h4>
+            <br>
+            <table class="table">
+                <thead style="color: white;">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Item</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Acción</th>
+                    <th scope="col">Total</th>
+                </tr>
+                </thead>
+                <tbody id="items" style="color: white;">
+                    <!-- por aqui se inserta el cuerpo -->
+                </tbody>
+                <tfoot style="color: white;">
+                    <!-- por aqui se inserta el footer -->
+                <tr id="footer">
+                    <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+                </tr>
+                </tfoot>
+            </table>
+
+        </div>
       
     </main>
-    
+    <footer class="footer-will">
+        <div class="pie-pagina">
+            <img class = "img1" src="./imagenes/Príncipe fresco.png" alt="">
+            <div class = "circulo"><img class = "img2" src="https://res.cloudinary.com/dobboq5dt/image/upload/v1630421638/Workshop%2031Agosto/Iconos/Vector_2_hjr3ze.png" alt=""></div>
+            <div class = "circulo"><img class = "img3" src="https://res.cloudinary.com/dobboq5dt/image/upload/v1630421638/Workshop%2031Agosto/Iconos/Vector_1_wyuxsg.png" alt=""></div>
+        </div>
 
+    </footer>
+
+    
+    <!-- templates ----------------------------------------------->
+
+    <!-- carrito -->
+    <template id="template-carrito">
+        <tr>
+        <th scope="row">id</th>
+        <td>Café</td>
+        <td>1</td>
+        <td>
+            <button class="btn btn-info btn-sm sumar"  style="color: white; font-size:16px;">
+                +
+            </button>
+            <button class="btn btn-danger btn-sm restar"  style="color: white; font-size:16px;">
+                -
+            </button>
+        </td>
+        <td>$ <span>500</span></td>
+        </tr>
+    </template>
+
+
+    <!-- footer carrito-->
+    <template id="template-footer">
+        <th scope="row" colspan="2">Total productos</th>
+        <td>10</td>
+        <td>
+            <button class="btn btn-danger btn-sm" id="vaciar-carrito" style="color: white; font-size:16px;">
+                Vaciar todo
+            </button>
+            <button class="btn btn-info btn-sm" id="finalizar-compra" style="color: white; font-size:16px;">
+                Finalizar compras
+            </button>  
+        </td>
+        <td class="font-weight-bold">$ <span>5000</span></td>
+    </template>
 
     <script src="./script/index.js" type="module"></script>
 </body>
