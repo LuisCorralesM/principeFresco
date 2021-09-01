@@ -1,10 +1,12 @@
 export {getProductos} 
+let Carrito = []
 
 const getProductos = async (p)=>{
     try {
         const res = await fetch('http://localhost:3000/productos')
         const data = await res.json()
         pintarProductos(data,p)
+        buttonCarrito(data,p)
     } catch (error) {
         console.log(error);
     }
@@ -43,9 +45,8 @@ const pintarProductos = (data,p)=>{
     btns.innerHTML = `
     <button class="btn1" data-id="${data[p].id}">ADD TO CART</button>
     <button class="btn2" data-id="${data[p].id}">BUY  IT NOW</button>
+   
     `
-
-
     // Todos los productos
     const 
     rowProductos = document.querySelector('.grid-row-productos')
@@ -78,3 +79,65 @@ document.addEventListener('click', e=>{
         getProductos(id)
     }
 })
+
+
+
+
+//Funcion listar carrito
+let listaCompra = document.getElementById('items')
+let listaTotal = document.getElementById('footer')
+const listarCarrito = () => {
+    listaCompra.innerHTML = '';
+    let total = 0;
+    let totalInt = 0;
+    Carrito = JSON.parse(localStorage.getItem('Carrito'));
+    Carrito === null ? (Carrito = []) : (
+    Carrito.forEach(element => {
+        totalInt += element.precio;
+        listaCompra.innerHTML += ``
+        total = totalInt;
+    })
+    );
+    getTotal(total);
+
+}
+function getTotal(total){
+    listaTotal.innerHTML = '';
+    listaTotal.innerHTML += ``
+    localStorage.setItem("Total",total);
+}
+
+
+    //Btn para añadir a carrito
+
+function buttonCarrito(data,p) {
+    let btnAddCarrito = document.getElementById(`${data[p].id}`)
+    btnAddCarrito.addEventListener('click',e=>{
+        e.preventDefault
+        // let idTarget = e.target.dataset.id;
+        //console.log(e.target.dataset.id)
+        const {id,nombre, cantidad, tallas, precio} = data[p]
+        // if (idTarget ==id ) {
+            const productoComprado = {
+                id: id,
+                nombre: nombre,
+                cantidad:cantidad,
+                tallas:tallas[0],
+                precio:precio   
+            }
+            localStorage.setItem("Producto",JSON.stringify(productoComprado));
+            Carrito.push(productoComprado)
+            localStorage.setItem('carrito', JSON.stringify(Carrito))
+            listarCarrito()
+        // }
+        })
+    
+}
+    
+
+
+
+
+
+
+//Modal del boton BUY IT NOW
